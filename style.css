@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow: hidden;
+    position: relative;         
+    height: 100vh;
+    width: 100%;
+    background-image: url('assets/night-time-sky-background-with-glittering-stars_1048-19664.avif');
+    
+}
+h1{
+    position: absolute;
+    z-index: 10;
+    top: 2%;
+    left: 2%;
+    color: #fff;
+}
+.hint{
+    position: absolute;
+    top: 10%;
+    left: 23%;
+    width: 100%;
+    z-index: 10;
+    color: transparent;
+    
+    -webkit-text-stroke: 1px #fff;
+    font-size: 50px;
+    animation-name: hint;
+    animation-duration: .8s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+.ground{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    height: 300%;
+    width: 300%;
+    background-image: url('assets/tile-based-video-game-isometric-graphics-in-video-games-and-pixel-art-road-tile-based-game-road-3caa25e8746331ae534d6d35e1a2eb75.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.ball{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    z-index: 2;
+}
+
+#character{
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9;
+}
+
+@keyframes hint {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
